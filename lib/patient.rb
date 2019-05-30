@@ -14,4 +14,8 @@ class Patient
     Appointment.all.select {|appt| appt.patient == self}
   end 
   
+  def doctors
+    self.appointments.select {|appt| appt.doctor}
+  end 
+  
 end 
